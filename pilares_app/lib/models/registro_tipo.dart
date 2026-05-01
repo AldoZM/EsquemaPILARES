@@ -19,14 +19,27 @@ extension RegistroTipoX on RegistroTipo {
 
   String get displayName {
     switch (this) {
-      case RegistroTipo.total:        return '# Total';
-      case RegistroTipo.capacitacion: return 'C Cap.';
-      case RegistroTipo.difusion:     return 'D Dif.';
-      case RegistroTipo.eventos:      return 'E Eventos';
-      case RegistroTipo.justificante: return 'J Just.';
-      case RegistroTipo.planeacion:   return 'P Plan.';
-      case RegistroTipo.na:           return 'N/A';
-      case RegistroTipo.borrar:       return '✕ Borrar';
+      case RegistroTipo.total:        return '# Total de Atenciones';
+      case RegistroTipo.capacitacion: return 'C — Capacitación';
+      case RegistroTipo.difusion:     return 'D — Difusión';
+      case RegistroTipo.eventos:      return 'E — Apoyo en Eventos';
+      case RegistroTipo.justificante: return 'J — Justificante';
+      case RegistroTipo.planeacion:   return 'P — Planeación';
+      case RegistroTipo.na:           return 'N/A — No Aplica';
+      case RegistroTipo.borrar:       return '✕ Borrar celda';
+    }
+  }
+
+  String get description {
+    switch (this) {
+      case RegistroTipo.total:        return 'Ingresa cuántas personas atendiste en esa hora';
+      case RegistroTipo.capacitacion: return 'Hora dedicada a tu propia capacitación como facilitador';
+      case RegistroTipo.difusion:     return 'Hora dedicada a difundir el programa PILARES';
+      case RegistroTipo.eventos:      return 'Apoyo o participación en un evento especial';
+      case RegistroTipo.justificante: return 'Hora justificada mediante comprobante oficial';
+      case RegistroTipo.planeacion:   return 'Hora dedicada a planear tus actividades del mes';
+      case RegistroTipo.na:           return 'Esta hora no corresponde a ningún registro';
+      case RegistroTipo.borrar:       return 'Toca una celda para eliminar su contenido';
     }
   }
 
