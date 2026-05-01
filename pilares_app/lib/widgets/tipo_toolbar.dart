@@ -53,7 +53,7 @@ class TipoToolbar extends StatelessWidget {
             const Text(
               'TIPO DE REGISTRO',
               style: TextStyle(
-                fontSize: 10,
+                fontSize: 8,
                 fontWeight: FontWeight.w800,
                 color: Color(0xFF888888),
                 letterSpacing: 0.8,
@@ -92,7 +92,7 @@ class TipoToolbar extends StatelessWidget {
                       child: Text(
                         provider.currentType.description,
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 9,
                           color: provider.currentType.cellForeground,
                         ),
                       ),
@@ -110,7 +110,7 @@ class TipoToolbar extends StatelessWidget {
                   const Text(
                     'Cantidad de atenciones por celda:',
                     style: TextStyle(
-                      fontSize: 13,
+                      fontSize: 10,
                       fontWeight: FontWeight.w600,
                       color: Color(0xFF333333),
                     ),
@@ -211,7 +211,7 @@ class _TipoChip extends StatelessWidget {
               const SizedBox(width: 7),
               Text(
                 tipo.displayName,
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: fg),
+                style: TextStyle(fontSize: 9, fontWeight: FontWeight.w700, color: fg),
               ),
               if (selected) ...[
                 const SizedBox(width: 6),
@@ -245,14 +245,14 @@ class _ValueStepper extends StatelessWidget {
             onTap: () => context.read<BoletaProvider>().decrementValue(),
           ),
           Container(
-            width: 47,
-            padding: const EdgeInsets.symmetric(vertical: 6),
+            width: 35,
+            padding: const EdgeInsets.symmetric(vertical: 4),
             alignment: Alignment.center,
             child: Text(
               '$value',
               style: const TextStyle(
                 fontWeight: FontWeight.w800,
-                fontSize: 18,
+                fontSize: 14,
                 color: Color(0xFF1B5E35),
               ),
             ),
@@ -279,10 +279,10 @@ class _StepButton extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(8),
       child: Container(
-        width: 40,
-        height: 40,
+        width: 30,
+        height: 30,
         decoration: const BoxDecoration(color: Color(0xFFE8F5EE)),
-        child: Icon(icon, size: 20, color: Color(0xFF1B5E35)),
+        child: Icon(icon, size: 15, color: Color(0xFF1B5E35)),
       ),
     );
   }
