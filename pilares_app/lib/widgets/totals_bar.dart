@@ -10,9 +10,9 @@ class TotalsBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<BoletaProvider>(
       builder: (ctx, provider, _) => Container(
-        color: Colors.white,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         decoration: const BoxDecoration(
+          color: Colors.white,
           border: Border(top: BorderSide(color: Color(0xFFE0E0E0))),
         ),
         child: Row(

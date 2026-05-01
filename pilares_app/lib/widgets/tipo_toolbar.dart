@@ -13,9 +13,9 @@ class TipoToolbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<BoletaProvider>(
       builder: (ctx, provider, _) => Container(
-        color: Colors.white,
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
         decoration: const BoxDecoration(
+          color: Colors.white,
           border: Border(bottom: BorderSide(color: Color(0xFFE0E0E0))),
         ),
         child: Column(
